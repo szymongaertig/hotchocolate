@@ -135,11 +135,11 @@ public class UserFilterType : FilterInputType<User>
         IFilterInputTypeDescriptor<User> descriptor)
     {
         descriptor.BindFieldsExplicitly();
-        descriptor.Field(f => f.Name).Type<CustomStringFilterType>();
+        descriptor.Field(f => f.Name).Type<CustomerOperationFilterInput>();
     }
 }
 
-public class CustomerOperationFilterInput : StringOperationFilterInput
+public class CustomerOperationFilterInput : StringOperationFilterInputType
 {
     protected override void Configure(IFilterInputTypeDescriptor descriptor)
     {
